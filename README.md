@@ -36,9 +36,9 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/marcelocanga/assesment-streamlab-electron.git
+git clone https://github.com/marcelocanga/assessment-streamlabs-electron.git
 # Go into the repository
-cd assesment-streamlab-electron
+cd assessment-streamlabs-electron
 # Install dependencies
 npm install
 # Run the app
