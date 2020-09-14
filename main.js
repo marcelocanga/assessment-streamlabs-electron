@@ -4,6 +4,25 @@ var shell = require('shelljs');
 const path = require('path')
 const console = require('console');
 
+// testing new module
+
+const testAddon = require('./build/Release/testaddon.node');
+console.log('addon',testAddon);
+console.log('hello ', testAddon.hello());
+console.log('add ', testAddon.add(5, 10));
+
+const prevInstance = new testAddon.ClassExample(4.3);
+console.log('Initial value : ', prevInstance.getValue());
+console.log('After adding 3.3 : ', prevInstance.add(3.3));
+
+const newFromExisting = new testAddon.ClassExample(prevInstance);
+
+console.log('Testing class initial value for derived instance');
+console.log(newFromExisting.getValue());
+
+// electron starts
+
+
 app.console = new console.Console(process.stdout, process.stderr);
 
 function createWindow () {
