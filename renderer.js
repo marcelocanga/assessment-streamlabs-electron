@@ -54,8 +54,8 @@ function dragElement(elmnt,off) {
     if(etop < 0 || eleft < 0 || (bouny-etop) < 0 || (bounx-eleft)<0  ) return;
     
     // set the element's new position:
-    elmnt.style.top    = (elmnt.offsetTop  - pos2) + "px";
-    elmnt.style.left   = (elmnt.offsetLeft - pos1) + "px";
+    elmnt.style.top    =  (elmnt.offsetTop  - pos2) + "px";
+    elmnt.style.left   =  (elmnt.offsetLeft - pos1) + "px";
     // store the last coor  
     let coor = [(elmnt.offsetTop  - pos2),(elmnt.offsetLeft - pos1)]   
     window.localStorage.setItem(store,JSON.stringify(coor))
