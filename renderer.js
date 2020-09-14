@@ -51,8 +51,8 @@ function dragElement(elmnt,off) {
     let bounx  = container.offsetWidth-elmnt.offsetWidth;
     let bouny  = container.offsetHeight-elmnt.offsetHeight;
 
-    if(etop<0 || eleft <0 || (bouny-etop) < 0 || (bounx-eleft)<0  ) return;
-      
+    if(etop < 0 || eleft < 0 || (bouny-etop) < 0 || (bounx-eleft)<0  ) return;
+    
     // set the element's new position:
     elmnt.style.top    = (elmnt.offsetTop  - pos2) + "px";
     elmnt.style.left   = (elmnt.offsetLeft - pos1) + "px";
@@ -71,39 +71,29 @@ function dragElement(elmnt,off) {
   }
 }
 
-function resizeWindow(e){
-    console.log("resizing",e);
+function resizeWindow(e) {
+  console.log("resizing", e);
 
-    e = e || window.event;
-    e.preventDefault();
+  e = e || window.event;
+  e.preventDefault();
 
-    let div1 = document.getElementById("mydiv1");
-    let div2 = document.getElementById("mydiv2");
-    
-    elementBound(e,div1);
-    elementBound(e,div2);
+  let div1 = document.getElementById("mydiv1");
+  let div2 = document.getElementById("mydiv2");
 
-    function elementBound(e,elmnt){
-	let fix   = false;
-	let store = `${elmnt.id}-coor`;
-     let etop  = elmnt.offsetTop;
-     let eleft = elmnt.offsetLeft;
-     let bounx  = container.offsetWidth-elmnt.offsetWidth;
-     let bouny  = container.offsetHeight-elmnt.offsetHeight;
-     let positionInfo = elmnt.getBoundingClientRect();
-     let coor = [elmnt.offsetTop,elmnt.offsetLeft]   
-	
-	console.log("elmnt",elmnt);
-	console.log("elmnt style top:",elmnt.style.top);
-	console.log("elmnt offset top:",elmnt.offsetTop);
-	console.log("bounx",bounx);
-	console.log("bouny",bouny);
-	console.log("etop", etop);
-	console.log("eleft",eleft);
-	console.log("store",store);
-	console.log("pos",positionInfo.height,positionInfo.width);
-	console.log("coor",coor);
-	
+  elementBound(e, div1);
+  elementBound(e, div2);
+
+  function elementBound(e, elmnt) {
+    let fix = false;
+    let store = `${elmnt.id}-coor`;
+    let etop = elmnt.offsetTop;
+    let eleft = elmnt.offsetLeft;
+    let bounx = container.offsetWidth - elmnt.offsetWidth;
+    let bouny = container.offsetHeight - elmnt.offsetHeight;
+    let positionInfo = elmnt.getBoundingClientRect();
+    let coor = [elmnt.offsetTop, elmnt.offsetLeft]
+
+
     if ((bouny - etop) < 0) {
       fix = true;
       coor[0] = container.offsetHeight - positionInfo.height
@@ -114,14 +104,23 @@ function resizeWindow(e){
       coor[1] = container.offsetWidth - positionInfo.width
       elmnt.style.left = (container.offsetWidth - positionInfo.width) + "px";
     }
+    if (etop < 0) {
+      fix = true;
+      coor[0] = 0
+      elmnt.style.top = "0px";
+    }
+    if (eleft < 0) {
+      fix = true;
+      coor[1] = 0
+      elmnt.style.left = "0px";
+    }
 
     if (fix) {
       window.localStorage.setItem(store, JSON.stringify(coor))
     }
-    console.log("fix",fix)
-    console.log("coor", coor);
+    
 
-  } 
+  }
 
 }
 
