@@ -24,9 +24,11 @@
 ## NOTE:
 
 - The OBS executable has been configured with a Twitch key for video streaming
-- The OBS app is run when the frontend comes up
+- The OBS app starts when the frontend comes up. It is configured to stream to Twitch
 - The executable is called from main.js in assesment-streamlab-electron
 - alternatively, a native module has been built, from where OBS can be called
+- For now, cmake-js is being used to build electron native module
+
 
 ## To Use
 
@@ -43,13 +45,16 @@ npm install
 npm start
 ```
 
-## Resources for Learning Electron
+## Selected Resources for this assignment 
 
+- https://github.com/stream-labs/streamlabs-obs - Streamlabs OBS app
+- https://github.com/obsproject/obs-studio - OBS-studio github repository
 - https://nodejs.org/api/addons.html - Nodejs addons
 - https://www.electronjs.org - Electron js
-- https://github.com/obsproject/obs-studio - OBS-studio github repository
-- https://github.com/stream-labs/streamlabs-obs - Streamlabs OBS app
 - https://nodeaddons.com/automating-a-c-program-from-a-node-js-web-app - How to write a node-js addon module
+- https://github.com/nodejs/nan - Native Abstractions for Node.js
+- https://github.com/cmake-js/cmake-js.git - Builder of native modules for electron
+- https://www.npmjs.com/package/shelljs - Unix shell commands for Node.js
 - [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
 - [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
 - [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
