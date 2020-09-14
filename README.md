@@ -26,7 +26,7 @@
 - The OBS executable has been configured with a Twitch key for video streaming
 - The OBS app starts when the frontend comes up. It is configured to stream to Twitch
 - The executable is called from main.js in assesment-streamlab-electron
-- alternatively, a native module has been built, from where OBS can be called
+- alternatively, a native module has been built, from where OBS could be called
 - For now, node-gyp is being used to build electron native module
 
 
