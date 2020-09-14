@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    
+#mydiv1 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+#mydiv2 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydiv1header {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+#mydiv2header {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+#container
+{
+  width: 95vw;
+  height: 53.4vw;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="container">
+    <h1>Streamlab Electron Assessment with Draggable squares!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+
+<p>Click and hold the mouse button down while moving the DIV element</p>
+
+<div id="mydiv1">
+  <div id="mydiv1header">Click here to move</div>
+  <p>Move</p>
+  <p>this</p>
+  <p>DIV</p>
+</div>
+
+<div id="mydiv2">
+  <div id="mydiv2header">Click here to move</div>
+  <p>Move</p>
+  <p>this</p>
+  <p>DIV</p>
+</div>
+</div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+
+  </body>
+</html>
