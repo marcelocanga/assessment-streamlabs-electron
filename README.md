@@ -27,7 +27,7 @@
 - The OBS app starts when the frontend comes up. It is configured to stream to Twitch
 - The executable is called from main.js in assesment-streamlab-electron
 - alternatively, a native module has been built, from where OBS can be called
-- For now, cmake-js is being used to build electron native module
+- For now, node-gyp is being used to build electron native module
 
 
 ## To Use
@@ -51,9 +51,8 @@ npm start
 - https://github.com/obsproject/obs-studio - OBS-studio github repository
 - https://nodejs.org/api/addons.html - Nodejs addons
 - https://www.electronjs.org - Electron js
-- https://nodeaddons.com/automating-a-c-program-from-a-node-js-web-app - How to write a node-js addon module
 - https://github.com/nodejs/nan - Native Abstractions for Node.js
-- https://github.com/cmake-js/cmake-js.git - Builder of native modules for electron
+- https://github.com/nodejs/node-gyp - Node.js native addon build tool
 - https://www.npmjs.com/package/shelljs - Unix shell commands for Node.js
 - [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
 - [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
@@ -61,3 +60,4 @@ npm start
 - [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
 - [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
 - [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+- https://medium.com/@a7ul/beginners-guide-to-writing-nodejs-addons-using-c-and-n-api-node-addon-api-9b3b718a9a7f
