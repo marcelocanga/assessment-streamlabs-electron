@@ -9,7 +9,7 @@
 - The images are not allowed to leave the parent canvas
 - If the window is resized, the images are reposition so that they stay inside the canvas. The final locations are restored on the app next startup
 
-# Electron Backend with Native ++
+# Electron Backend with Native C++
 
 - Download OBS
 ### For Mac:
