@@ -1,6 +1,6 @@
 # Frontend
 ## NOTE:
-- The Frontend assignment has been written in the context of an electron application
+- The Frontend has been written in the context of an electron application
 - The canvas is responsive, with a 16:9 ratio
 - There are two images that can be drag with the mouse
 - Each image can be push to the top with mouse selection
