@@ -1,4 +1,4 @@
-# Streamlabs Frontend Take Home Assignment
+# Frontend
 ## NOTE:
 - The Frontend assignment has been written in the context of an electron application
 - The canvas is responsive, with a 16:9 ratio
@@ -9,7 +9,7 @@
 - The images are not allowed to leave the parent canvas
 - If the window is resized, the images are reposition so that they stay inside the canvas. The final locations are restored on the app next startup
 
-# Streamlabs Backend Take Home Assignment
+# Electron Backend with Native ++
 
 - Download OBS
 ### For Mac:
@@ -25,7 +25,7 @@
 
 - The OBS executable has been configured with a Twitch key for video streaming
 - The OBS app starts when the frontend comes up. It is configured to stream to Twitch
-- The executable is called from main.js in assesment-streamlab-electron
+- The executable is called from main.js in 
 - alternatively, a native module has been built, from where OBS could be called
 - For now, node-gyp is being used to build electron native module
 
@@ -45,7 +45,7 @@ npm install
 npm start
 ```
 
-## Selected Resources for this assignment 
+## Selected Resources 
 
 - https://github.com/stream-labs/streamlabs-obs - Streamlabs OBS app
 - https://github.com/obsproject/obs-studio - OBS-studio github repository
